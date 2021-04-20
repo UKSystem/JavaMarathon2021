@@ -5,10 +5,11 @@ import java.util.Random;
 public class Task4 {
     public static void main(String[] args) {
 
-        int[] arr = new int[100];
-        int index = 0;
-        int sumParser = 0;
-        int sumFinish = 0;
+        int[] arr = new int[100];               // Размер массива
+        int sumQuantityElements = 3;            // Количество рядом стоящих элеметов для суммирования
+        int index = 0;                          // Индекс первого элемента в элементах для суммирования
+        int sumParser = 0;                      // Переменная для промежуточного суммирования
+        int sumFinish = 0;                      // Переменная для хранения максимального результата
 
         Random random = new Random();
 
@@ -17,10 +18,14 @@ public class Task4 {
             arr[i] = random.nextInt(10000);
         }
 
-        for (int i = 0; i < arr.length - 2; i++)
+        for (int i = 0; i < arr.length - sumQuantityElements + 1; i++)
         {
             sumParser = 0;
-            sumParser = arr[i] + arr[i+1] + arr [i+2];
+
+            for (int j = 0; j < sumQuantityElements; j++){
+                sumParser += arr[i+j];
+            }
+
             if (sumFinish < sumParser)
             {
                 sumFinish = sumParser;
