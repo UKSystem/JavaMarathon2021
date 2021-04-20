@@ -27,8 +27,6 @@ public class Motorbike {
     }
 
     int yearDifference(int inputYear){
-        int yearDiff = inputYear - manufactured;
-        if (yearDiff >= 0) return yearDiff;
-        else return 0;
+        return Math.abs(inputYear - manufactured);
     }
 }

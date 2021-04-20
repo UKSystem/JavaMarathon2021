@@ -15,7 +15,7 @@ public class Task1 {
         System.out.println("Введите год:");
         int inputYear = newInput.nextInt();
 
-        System.out.println("Автомобилю уже: " + car1.yearDifference(inputYear));
-        System.out.println("Мотоциклу уже: " + bike1.yearDifference(inputYear));
+        System.out.println("Разница между годом выпуска Автомобиля и введенным годом: " + car1.yearDifference(inputYear));
+        System.out.println("Разница между годом выпуска Мотоцикла и введенным годом: " + bike1.yearDifference(inputYear));
     }
 }

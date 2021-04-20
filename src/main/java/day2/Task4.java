@@ -11,7 +11,7 @@ public class Task4 {
         double x = newinput.nextDouble();
         System.out.println();
 
-        double y = 0;
+        double y = 0;  // double y = 420;
 
         if (x >= 5)
         {
@@ -21,7 +21,7 @@ public class Task4 {
             y = (x + 3) * (pow(x,2)-2);
         } else
         {
-            y = 420;
+            y = 420;  // убрать !
         }
 
         System.out.println(y);

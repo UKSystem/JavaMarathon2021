@@ -13,21 +13,18 @@ public class Task4 {
 
         Random random = new Random();
 
-        for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(10000);
         }
 
-        for (int i = 0; i < arr.length - sumQuantityElements + 1; i++)
-        {
+        for (int i = 0; i < arr.length - sumQuantityElements + 1; i++) {
             sumParser = 0;
 
-            for (int j = 0; j < sumQuantityElements; j++){
-                sumParser += arr[i+j];
+            for (int j = 0; j < sumQuantityElements; j++) {
+                sumParser += arr[i + j];
             }
 
-            if (sumFinish < sumParser)
-            {
+            if (sumFinish < sumParser) {
                 sumFinish = sumParser;
                 index = i;
             }
