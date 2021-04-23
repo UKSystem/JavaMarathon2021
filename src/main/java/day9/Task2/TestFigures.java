@@ -3,9 +3,6 @@ package day9.Task2;
 public class TestFigures {
     public static void main(String[] args) {
 
-        double sumPerimeter = 0;
-        double sumArea = 0;
-
         Figure[] figures = {
                 new Triangle(10, 10, 10, "Red"),
                 new Triangle(10, 20, 30, "Green"),
@@ -17,15 +14,28 @@ public class TestFigures {
                 new Circle(5, "Blue")
         };
 
-        for (Figure i : figures) {
+        System.out.println("Сумма периметров красных фигур: " + calculateRedPerimeter(figures));
+        System.out.println("Сумма площадей красных фигур: " + calculateRedArea(figures));
+    }
 
-            if (i.getColor() == "Red") {
+    public static double calculateRedPerimeter(Figure[] figures) {
+        double sumPerimeter = 0;
+        for (Figure i : figures) {
+            if (i.getColor().equals("Red")) {
                 sumPerimeter += i.perimeter();
+            }
+        }
+        return sumPerimeter;
+    }
+
+    public static double calculateRedArea(Figure[] figures) {
+        double sumArea = 0;
+        for (Figure i : figures) {
+            if (i.getColor().equals("Red")) {
                 sumArea += i.area();
             }
         }
-
-        System.out.println("Сумма периметров красных фигур: " + sumPerimeter);
-        System.out.println("Сумма площадей красных фигур: " + sumArea);
+        return sumArea;
     }
+
 }
